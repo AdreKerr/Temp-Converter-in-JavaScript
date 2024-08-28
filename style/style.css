@@ -1,0 +1,45 @@
+.big{
+    background-color: whitesmoke;
+    z-index: -1;
+}
+
+
+.space{
+    height: 160px;
+}
+.space1{
+    height: 50px;
+}
+.h1{
+    box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.438);
+    z-index: 1;
+}
+.inputField{
+    box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.438);
+    z-index: 1;
+}
+
+.big input{
+    border-radius: 15px;
+    background-color: whitesmoke;
+    border-color: whitesmoke;
+    outline: whitesmoke;
+}
+#TempNum{
+    border-radius: 0px;
+    background-color: whitesmoke;
+    border-color: whitesmoke;
+}
+
+.displayTemp ul{
+    text-align: center;
+}
+
+#img{
+    backface-visibility: visible;
+    height: auto;
+    width: 100%;
+    position:absolute;
+    bottom: 0px;
+    z-index: 0;
+}
