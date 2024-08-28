@@ -63,20 +63,20 @@ function Celsius(){
     K = (C + 273.15)
     
     //if else tree
-    if(K <= 0 || C >= 40){
-        confirm("Thats too hot for the human body");
-        changeColorRed();
-        //console log
-        DisplayTemp[0].innerHTML = `Celsius : ${C}`;
-        DisplayTemp[1].innerHTML = `Fehrenheit : ${F}`;
-        DisplayTemp[2].innerHTML = `Kelvin : INVALID!! Can't have a negative or zero Kelvin.`;
-    } else if (F <= 32){
+    if (F <= 32){
         confirm("Too cold for the human body");
         changeColorBlue();
         //console log
         DisplayTemp[0].innerHTML = `Celsius    : ${C}`;
         DisplayTemp[1].innerHTML = `Fehrenheit : ${F}`;
         DisplayTemp[2].innerHTML = `Kelvin     : ${K}`;
+    } else if(K <= 0 || C >= 40){
+        confirm("Thats too hot for the human body");
+        changeColorRed();
+        //console log
+        DisplayTemp[0].innerHTML = `Celsius : ${C}`;
+        DisplayTemp[1].innerHTML = `Fehrenheit : ${F}`;
+        DisplayTemp[2].innerHTML = `Kelvin : INVALID!! Can't have a negative or zero Kelvin.`;
     } else {
         changeColorYellow();
         //console log
@@ -93,21 +93,21 @@ function Fahrenheit(){
     K = (C + 273.15)
 
     //if else tree
-    if (K <= 0 || C >= 40){
-        //console log
-        confirm("Thats too hot for the human body");
-        changeColorRed();
-        DisplayTemp[0].innerHTML = `Fehrenheit : ${F}`;
-        DisplayTemp[1].innerHTML = `Celsius    : ${C}`;
-        DisplayTemp[2].innerHTML = `Kelvin     : INVALID!! Can't have a negative or zero Kelvin.`;
-    } else if (F <= 32){
+    if (F <= 32){
         confirm("Too cold for the human body");
         changeColorBlue();
         //console log
         DisplayTemp[0].innerHTML = `Fehrenheit : ${F}`;
         DisplayTemp[1].innerHTML = `Celsius    : ${C}`;
         DisplayTemp[2].innerHTML = `Kelvin     : ${K}`;
-    } else {
+    } else if (K <= 0 || C >= 40){
+        //console log
+        confirm("Thats too hot for the human body");
+        changeColorRed();
+        DisplayTemp[0].innerHTML = `Fehrenheit : ${F}`;
+        DisplayTemp[1].innerHTML = `Celsius    : ${C}`;
+        DisplayTemp[2].innerHTML = `Kelvin     : INVALID!! Can't have a negative or zero Kelvin.`;
+    }else {
         changeColorYellow();
         //console log
         DisplayTemp[0].innerHTML = `Fehrenheit : ${F}`;
