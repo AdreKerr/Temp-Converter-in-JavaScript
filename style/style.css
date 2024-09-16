@@ -1,45 +1,126 @@
+/* big class */
 .big{
     background-color: whitesmoke;
     z-index: -1;
+    text-align: center;
 }
-
-
-.space{
-    height: 160px;
-}
-.space1{
-    height: 50px;
-}
-.h1{
-    box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.438);
-    z-index: 1;
-}
-.inputField{
-    box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.438);
-    z-index: 1;
-}
-
 .big input{
     border-radius: 15px;
     background-color: whitesmoke;
     border-color: whitesmoke;
     outline: whitesmoke;
 }
-#TempNum{
-    border-radius: 0px;
-    background-color: whitesmoke;
-    border-color: whitesmoke;
+.big :any-link{
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+.big :any-link:hover{
+    color:#ffda6a;
+}
+.big input{
+    background-color:darkslategray;
+    color: white;
+    border: darkslategrey 1px solid;
+    box-shadow: 4px 4px gainsboro;
+    padding: 5px;
+}
+.big input:hover{
+    color: #ffda6a;
 }
 
-.displayTemp ul{
+/* top border class */
+.topBorder{
+    background-color: darkslategrey;
+    color: white;
     text-align: center;
+    padding: 10px;
+    z-index: 1;
 }
 
+/* title */
+.Title h1{
+    text-align: center; 
+    background-color: white; 
+    padding-top: 10px; 
+    padding-bottom: 10px; 
+    border-radius: 15px;
+    box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.438);
+    z-index: 1;
+}
+
+/* body class */
+.body{
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.438);
+    z-index: 1;
+}
+.body h1{
+    margin-bottom: 10px
+}
+#border{
+    padding: 10px;
+    margin-left: 2px;
+}
+#locationInput{
+    margin-bottom: 10px;
+}
+#searchButton{
+    margin-bottom: 10px;
+}
+#btn{
+    margin-bottom: 10px;
+}
+#Lists{
+    padding: 10px;
+}
+
+
+
+/* bottom border class */
+.bottomBorder{
+    background-color:darkslategrey;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    z-index: 1;
+}
+
+
+
+
+/* in tempconveter page */
+
+.inputField{
+    box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.438);
+    z-index: 1;
+}
+
+.Input{
+    margin-bottom: 20px; 
+    margin-top: 20px;
+}
+
+
+
+
+/* images added in js*/
 #img{
     backface-visibility: visible;
-    height: auto;
-    width: 100%;
     position:absolute;
-    bottom: 0px;
+    bottom: 50px;
     z-index: 0;
+}
+
+
+/* space */
+.space{
+    height: 150px;
+}
+.space1{
+    height: 200px;
 }

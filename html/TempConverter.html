@@ -3,32 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Temp-Converter-in-JavaScript/style/style.css">
-    <link rel="stylesheet" href="../Temp-Converter-in-JavaScript/style/bootstrap.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/bootstrap.css">
     <title>TempConverter</title>
 </head>
 <body>
     <div class="big" id="big">
 
-        <div class="space" id="space"></div>
-        
-
-        <!-- TITLE -->
-        <div class="container Title" id="space">
-            <div class="row">
-                <div class="col-xl-4 col-lg-3 col-md-3 col-sm-2 col-xs-1" id="space change"></div>
-                <h1 class="h1 col-xl-4 col-lg-6 col-md-6 col-sm-8 col-xs-10" style="text-align: center; background-color: white; padding-top: 10px; padding-bottom: 10px; border-radius: 15px;">Temp Converter</h1>
-                <div class="col-xl-4 col-lg-3 col-md-3 col-sm-2 col-xs-1" id="space change"></div>
+        <!-- Top border -->
+        <div class="row topBorder">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
+                <h1>Temp Converter Page</h1>
             </div>
-        </div><!-- End Title -->
-        
-        <div class="space1" id="space change"></div>
-        
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-2 col-xl-1"></div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5 col-xl-6 row">
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 col-xl-3">
+                    <a href="../html/homePage.html">Home Page</a>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-5 col-xl-5">
+                    <a href="../html/TempConverter.html">Temprature Converter</a>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                    <a href="../html/WethearProdictor.html">Weather Prodictor</a>
+                </div>
+            </div><!-- end col 6 -->
+        </div><!-- end row -->
+
+        <!-- space -->
+        <div class="space"></div>
+
+        <!-- body class -->
         <div class="container">
             <div class="row">
                 <div class="col-xl-4 col-lg-3 col-md-3 col-sm-2 col-xs-1" id="space change"></div>
-                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-8 col-xs-10 inputField" style="background-color: white; border-radius: 15px;">
-                    <div class="col-12 Input" style="text-align: center; margin-bottom: 20px; margin-top: 20px;">
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-8 col-xs-10 body">
+                    <div class="col-12">
+                        <h1>Temprature Converter</h1>
+                    </div>
+                    <div class="col-12 Input">
                         <input type="number" placeholder="What is your Temprature" name="Temp" id="TempNum">
                     </div>
                     <div class="col-12 dropDown row" style="margin-bottom: 20px;">
@@ -39,7 +51,7 @@
                         <div class="col-1"></div>
                         <input class="col-3" id="Temp3" type="button" value="Celsius">
                     </div>
-                    <div class="col-12 Clear row" style="margin-bottom: 20px; text-align: center;">
+                    <div class="col-12 Clear row" style="margin-bottom: 20px;">
                         <div class="col-3"></div>
                         <input class="col-7" type="button" id="clear" value="Clear">
                         <div class="col-3"></div>
@@ -49,20 +61,32 @@
                         <ul></ul>
                         <ul></ul>
                     </div>
-                </div><!-- end col-6 -->
+                </div><!-- end class body-->
                 <div class="col-xl-4 col-lg-3 col-md-3 col-sm-2 col-xs-1" id="space change"></div>
             </div><!-- end row -->
         </div><!-- end container -->
         
+        <!-- space -->
         <div class="space" id="space">
             <div class="col-xl-4 col-lg-3 col-md-3 col-sm-2 col-xs-1"></div>
             <div class="col-xl-4 col-lg-6 col-md-6 col-sm-8 col-xs-10">
                 <img class=".col-12" id="img">
-
             </div>
             <div class="col-xl-4 col-lg-3 col-md-3 col-sm-2 col-xs-1"></div>
         </div>
         
+        <!-- botom border -->
+        <div class="row bottomBorder">
+            <div class="col-xs-12 col-sm-6 col-md-8 col-lg-9 col-xl-10"></div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 row">
+                 <div class="col-6">
+                    <a class="col-12" href="#">LinkedIn</a>
+                </div>
+                <div class="col-6">
+                    <a class="col-12" href="#">GitHub</a>
+                </div>
+            </div>
+        </div><!-- end row -->
         
 
     </div><!-- end big -->
@@ -70,5 +94,5 @@
 
     <!-- end html -->
 </body><!-- end body -->
-<script type="text/javascript" src="../Temp-Converter-in-JavaScript/js/app.js"></script>
+<script type="text/javascript" src="../js/app.js"></script>
 </html><!-- end html -->
