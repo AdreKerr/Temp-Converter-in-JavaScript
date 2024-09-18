@@ -29,6 +29,7 @@
     color: #ffda6a;
 }
 
+
 /* top border class */
 .topBorder{
     background-color: darkslategrey;
@@ -52,7 +53,7 @@
 /* body class */
 .body{
     background-color: white;
-    color: black;
+    color: darkslategray;
     text-align: center;
     padding: 15px;
     border-radius: 15px;
@@ -62,7 +63,7 @@
 .body h1{
     margin-bottom: 10px
 }
-#border{
+#Text{
     padding: 10px;
     margin-left: 2px;
 }
@@ -75,8 +76,34 @@
 #btn{
     margin-bottom: 10px;
 }
-#Lists{
-    padding: 10px;
+
+
+
+/* display class */
+.dispayWeather{
+    background-color: white;
+    color: darkslategray;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.438);
+    z-index: 1;
+}
+.dispayWeather li{
+    text-decoration: none;
+    list-style: none;
+    padding: 15px;
+}
+#days{
+    border-top: darkslategray 2px solid;
+}
+#first{
+    margin-top: 15px;
+}
+#days img{
+    margin-top: 15px;
+}
+#Info{
+    padding-top: 15px;
 }
 
 
@@ -123,4 +150,7 @@
 }
 .space1{
     height: 200px;
+}
+.space2{
+    height: 20px;
 }
