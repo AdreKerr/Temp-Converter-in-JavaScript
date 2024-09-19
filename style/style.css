@@ -2,7 +2,6 @@
 .big{
     background-color: whitesmoke;
     z-index: -1;
-    text-align: center;
 }
 .big input{
     border-radius: 15px;
@@ -83,10 +82,19 @@
 .dispayWeather{
     background-color: white;
     color: darkslategray;
-    text-align: center;
     border-radius: 15px;
     box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.438);
     z-index: 1;
+}
+.dispayWeather h1{
+    text-align: center;
+}
+.dispayWeather h2{
+    text-align: center;
+    margin-top: 15px;
+}
+.dispayWeather h5{
+    text-align: center;
 }
 .dispayWeather li{
     text-decoration: none;
@@ -97,13 +105,20 @@
     border-top: darkslategray 2px solid;
 }
 #first{
-    margin-top: 15px;
+    margin-top: 10px;
 }
-#days img{
-    margin-top: 15px;
+#text{
+    padding-left: 20px;
+}
+#second{
+    margin-top: 10px;
 }
 #Info{
     padding-top: 15px;
+}
+#ForcastImg{
+    padding: 0px;
+    flex: auto;
 }
 
 

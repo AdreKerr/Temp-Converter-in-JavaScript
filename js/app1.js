@@ -60,19 +60,29 @@ async function fetchTemp(NewStaiton,latitude,longitude) {
     let url = `https://api.weather.gov/gridpoints/${NewStaiton}/${latitude},${longitude}/forecast`
     //varables
     let day;
-    let Temp;
     let TempType;
+
+    // day time
+    let Temp;
     let WindSpeed;
     let windDirection
     let CurrentImg;
     let CurrentForcast;
+
+    // night time
+    let TempLow;
+    let NightWindSpeed;
+    let NightwindDirection;
+    let NightForcast;
+    let NightImg;
+
     
     await fetch(url)
     .then(response => response.json())
     .then(data => {
         console.log(data);
         //get data
-        for(let i = 0; i<data.properties.periods.length;i++){
+        for(let i = 0; i<data.properties.periods.length;i+=2){
             //get data
             day = data.properties.periods[i].name
             Temp = data.properties.periods[i].temperature
@@ -81,8 +91,17 @@ async function fetchTemp(NewStaiton,latitude,longitude) {
             windDirection = data.properties.periods[i].windDirection
             CurrentImg = data.properties.periods[i].icon
             CurrentForcast = data.properties.periods[i].shortForecast
-            //display each time
-            displayWeather(day,Temp,TempType,WindSpeed,windDirection,CurrentImg,CurrentForcast);
+            
+            for(let i = 1; i<data.properties.periods.length;i+=2){
+                TempLow = data.properties.periods[i].temperature
+                NightWindSpeed = data.properties.periods[i].windSpeed
+                NightwindDirection = data.properties.periods[i].windDirection
+                NightImg = data.properties.periods[i].icon
+                NightForcast = data.properties.periods[i].shortForecast
+            
+                //display each time
+            }
+            displayWeather(day,Temp,TempLow,TempType,WindSpeed,windDirection,NightWindSpeed,NightwindDirection,CurrentImg,NightImg,CurrentForcast,NightForcast);
             
         }//end for loop 
         // staion == NewsSatioan
@@ -104,24 +123,34 @@ let TempDisplay = document.querySelector(".dBorder");
 //functions to dipaly evyerthign
 
 // funcition to dispaly the weather
-function displayWeather(Days,temperature,tempType,windSpeed,dirct,imgFor,forecast){
+function displayWeather(Days,temperature,tempLow,tempType,windSpeed,dirct,NwindSpeed,Ndirect,imgFor,NimgFor,forecast,Nforecast){
     //dispaly temps and forcast
-    ChangeColor(temperature)
+    ChangeColor(temperature,tempLow)
         // temps and day display
         let LiDisplayTemp = document.createElement("li");
         LiDisplayTemp.innerHTML = `
         <div class="row" id="days">
-            <h1 class="col-12" id="first">${Days}</h1>
-            <div class="col-8 row" id="first">
-                <h1 class="col-12">
-                    <span class="col-6">${temperature}</span>
-                    <span class="col-6">${tempType}</span>
-                </h1>
+        <div class="col-12 row">
+            <h1 class="col-7" id="first">${Days}</h1>
+            <h2 class="col-5">${temperature} - ${tempLow} ${tempType}</h2>
+        </div>
+        <div class="col-12 row" id="first">
+            <h5 class="col-12"> -===- Day -===-</h5>
+            <div class="col-9 row" id="text">
                 <span class="col-12">Wind Speed - ${windSpeed}</span>
                 <span class="col-12">Wind Direction - ${dirct}</span>
-                <span class="col-12">${forecast}</span>
+                <span class="col-12">Forecast - ${forecast}</span>
             </div>
-            <img class="col-4" src="${imgFor}" id="ForcastImg" alt="weath forcst">
+            <img class="col-3" src="${imgFor}" id="ForcastImg" alt="weath forcst">
+        </div> 
+        <div class="col-12 row" id="second"> 
+            <h5 class="col-12"> -===- Night -===-</h5>
+            <div class="col-9 row" id="text">
+                <span class="col-12">Wind Speed - ${NwindSpeed}</span>
+                <span class="col-12">Wind Direction - ${Ndirect}</span>
+                <span class"col-12">Forecast - ${Nforecast}</span>
+            </div>
+            <img class="col-3" src="${NimgFor}" id="ForcastImg" alt="weath forcst">    
         </div>
         `;
         
@@ -145,10 +174,10 @@ function DisplayInfo(city1,state1){
 //functions for vistual diaplays
 
 // function to change color
-function ChangeColor(Temp){
-    if (Temp <= 32){
+function ChangeColor(TempH,TempL){
+    if (TempH <= 32 || TempL <= 32){
         TempDisplay.style.color = "#0d6efd";
-    } else if(Temp >= 98){
+    } else if(TempH >= 98 || TempH >= 98){
        TempDisplay.style.color = "red";
     } else {
         TempDisplay.style.color = "#ffda6a";
