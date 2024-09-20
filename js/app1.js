@@ -82,31 +82,33 @@ async function fetchTemp(NewStaiton,latitude,longitude) {
     .then(data => {
         console.log(data);
         //get data
-        for(let i = 0; i<data.properties.periods.length;i+=2){
-            //get data
-            day = data.properties.periods[i].name
-            Temp = data.properties.periods[i].temperature
-            TempType = data.properties.periods[i].temperatureUnit
-            WindSpeed = data.properties.periods[i].windSpeed
-            windDirection = data.properties.periods[i].windDirection
-            CurrentImg = data.properties.periods[i].icon
-            CurrentForcast = data.properties.periods[i].shortForecast
-            
-            for(let i = 1; i<data.properties.periods.length;i+=2){
-                TempLow = data.properties.periods[i].temperature
-                NightWindSpeed = data.properties.periods[i].windSpeed
-                NightwindDirection = data.properties.periods[i].windDirection
-                NightImg = data.properties.periods[i].icon
-                NightForcast = data.properties.periods[i].shortForecast
-            
-                //display each time
+        for(let i = 0; i<data.properties.periods.length;i++){
+            if(data.properties.periods[i].isDaytime === true){
+                
+                //day
+                let d = i;
+                day = data.properties.periods[d].name
+                Temp = data.properties.periods[d].temperature
+                TempType = data.properties.periods[d].temperatureUnit
+                WindSpeed = data.properties.periods[d].windSpeed
+                windDirection = data.properties.periods[d].windDirection
+                CurrentImg = data.properties.periods[d].icon
+                CurrentForcast = data.properties.periods[d].shortForecast
+                
+                //night
+                let n = i;
+                TempLow = data.properties.periods[n+1].temperature
+                NightWindSpeed = data.properties.periods[n+1].windSpeed
+                NightwindDirection = data.properties.periods[n+1].windDirection
+                NightImg = data.properties.periods[n+1].icon
+                NightForcast = data.properties.periods[n+1].shortForecast
             }
-            displayWeather(day,Temp,TempLow,TempType,WindSpeed,windDirection,NightWindSpeed,NightwindDirection,CurrentImg,NightImg,CurrentForcast,NightForcast);
-            
-        }//end for loop 
-        // staion == NewsSatioan
+            else{
 
-        
+                displayWeather(day,Temp,TempLow,TempType,WindSpeed,windDirection,NightWindSpeed,NightwindDirection,CurrentImg,NightImg,CurrentForcast,NightForcast);
+            }
+                
+        }//end for loop
         // find what and how to pull the data for each element
     
     })
@@ -114,9 +116,6 @@ async function fetchTemp(NewStaiton,latitude,longitude) {
         console.error(error);
     });
 }//end funtion fetch weather
-
-
-
 
 
 let TempDisplay = document.querySelector(".dBorder");
