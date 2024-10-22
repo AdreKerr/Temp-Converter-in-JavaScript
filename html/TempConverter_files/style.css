@@ -1,0 +1,171 @@
+/* big class */
+.big{
+    background-color: whitesmoke;
+    z-index: -1;
+}
+.big input{
+    border-radius: 15px;
+    background-color: whitesmoke;
+    border-color: whitesmoke;
+    outline: whitesmoke;
+}
+.big :any-link{
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+.big :any-link:hover{
+    color:#ffda6a;
+}
+.big input{
+    background-color:darkslategray;
+    color: white;
+    border: darkslategrey 1px solid;
+    box-shadow: 4px 4px gainsboro;
+    padding: 5px;
+}
+.big input:hover{
+    color: #ffda6a;
+}
+
+
+/* top border class */
+.topBorder{
+    background-color: darkslategrey;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    z-index: 1;
+}
+
+/* title */
+.Title h1{
+    text-align: center; 
+    background-color: white; 
+    padding-top: 10px; 
+    padding-bottom: 10px; 
+    border-radius: 15px;
+    box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.438);
+    z-index: 1;
+}
+
+/* body class */
+.body{
+    background-color: white;
+    color: darkslategray;
+    text-align: center;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.438);
+    z-index: 1;
+}
+.body h1{
+    margin-bottom: 10px
+}
+#Text{
+    padding: 10px;
+    margin-left: 2px;
+}
+#locationInput{
+    margin-bottom: 10px;
+}
+#searchButton{
+    margin-bottom: 10px;
+}
+#btn{
+    margin-bottom: 10px;
+}
+
+
+
+/* display class */
+.dispayWeather{
+    background-color: white;
+    color: darkslategray;
+    border-radius: 15px;
+    box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.438);
+    z-index: 1;
+}
+.dispayWeather h1{
+    text-align: center;
+}
+.dispayWeather h2{
+    text-align: center;
+    margin-top: 15px;
+}
+.dispayWeather h5{
+    text-align: center;
+}
+.dispayWeather li{
+    text-decoration: none;
+    list-style: none;
+    padding: 15px;
+}
+#days{
+    border-top: darkslategray 2px solid;
+}
+#first{
+    margin-top: 10px;
+}
+#text{
+    padding-left: 20px;
+}
+#second{
+    margin-top: 10px;
+}
+#Info{
+    padding-top: 15px;
+}
+#ForcastImg{
+    padding: 0px;
+    flex: auto;
+}
+
+
+
+/* bottom border class */
+.bottomBorder{
+    background-color:darkslategrey;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    z-index: 1;
+}
+
+
+
+
+/* in tempconveter page */
+
+.inputField{
+    box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.438);
+    z-index: 1;
+}
+
+.Input{
+    margin-bottom: 20px; 
+    margin-top: 20px;
+}
+
+
+
+
+/* images added in js*/
+#img{
+    backface-visibility: visible;
+    position:absolute;
+    bottom: 50px;
+    z-index: 0;
+}
+
+
+/* space */
+.space{
+    height: 180px;
+}
+.space1{
+    height: 220px;
+}
+.space2{
+    height: 20px;
+}
