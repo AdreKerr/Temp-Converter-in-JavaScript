@@ -122,14 +122,14 @@ let img = document.getElementById("img");
 
 //color change
 function changeColorBlue() {
-    img.src = "pics/gifts/ice.gif";
+    img.src = "pics/ice.gif";
     document.getElementById("big").style.backgroundColor = "#0d6efd";
     document.body.appendChild(img);
     
 }
 
 function changeColorRed() {
-    img.src = "pics/gifts/fireGif.gif";
+    img.src = "pics/fireGif.gif";
     document.getElementById("big").style.backgroundColor = "red";
     document.body.appendChild(img);
 }
